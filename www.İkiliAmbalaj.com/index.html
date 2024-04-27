@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>www.ikiliambalaj.com</title>
+ 
+</head>
+
+<style>
+  * {
+box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  background-color: #000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
+  display: block;
+}
+
+
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/* navbar */
+
+nav {
+  position: absolute;
+  width: 100%;
+}
+
+nav .container {
+  max-width: 1600px;
+  margin: auto;
+  margin-top: 8px;
+}
+
+nav .Logo a {
+  font-size: 22px;
+  color: #fff;
+  max-width: 250px;
+  margin: auto;
+
+}
+
+nav .Menu {
+  float: right;
+}
+
+.TopNav {
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.TopNav a {
+  display: block;
+  float: left;
+  color: #fff;
+  padding: 14px 18px;
+  text-decoration: none;
+  font-size: 17px;
+  margin: auto;
+
+}
+
+.TopNav a:hover {
+  color: #8B93FF;
+  transition: 0.5s;
+}
+
+.TopNav .icon {
+  float: right;
+  display: none;
+}
+
+/* header */
+
+header {
+  height: 100vh;
+  padding-top: 300px;
+  padding-right: 700px;
+  text-align: center;
+  background: url(/images/header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  font-size: 25px;
+}
+
+/* content */
+
+
+
+section {
+
+  padding: 100px;
+  border-bottom: 5px solid #BED1CF;
+  /*Section altındaki çizgi özellikleri*/
+
+}
+
+section p {
+  line-height: 28px;
+  text-align: justify;
+  font-size: large;
+
+}
+
+.col-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.col-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.FirstTitle {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.SecondTitle {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+/* Footer */
+
+footer p {
+  width: 100%;
+  margin: 0px;
+  background-color: #323544;
+  color: #999;
+  text-align: center;
+  line-height: 70px;
+}
+
+/* products */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  /* Kartlar arası boşluk */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(33.33% - 40px);
+  /* Kart genişliği hesaplanırken 40 piksel boşluk bırakılır */
+  max-width: 400px;
+  /* Kart genişliği maksimum 400 piksel */
+  transform: scale(1.05);
+  /* %5 büyütme */
+  transition: transform 0.3s ease;
+  /* yumuşak geçiş efekti */
+  margin-top: 30px;
+  /* Yalnızca yukarıdan 30 piksel boşluk */
+}
+
+.card:hover {
+  transform: scale(1.1);
+  /* Hover durumunda daha fazla büyütme */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.card-content p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Telefonlara uyumlu hale getirme */
+@media screen and (max-width: 1000px) {
+  .card {
+    width: calc(100% - 40px);
+    /* Kart genişliği telefonlarda ekran genişliğine eşit olacak */
+    margin-top: 20px;
+    /* Kartlar arası boşluk telefonlarda azaltıldı */
+  }
+
+  .col-33,
+  .col-66 {
+    width: 90%;
+    padding: 0;
+  }
+
+  img {
+    margin-bottom: 20px;
+  }
+}
+
+
+#Contact {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#Contact h2,
+#Contact h3,
+#Contact p {
+  margin: 0;
+  text-align: left;
+}
+
+#Contact iframe {
+  width: 100%;
+  height: 500px;
+  /* Harita yüksekliğini 500 piksele çıkardık */
+}
+
+@media (max-width: 1000px) {
+  #Contact {
+    padding: 10px;
+  }
+
+  #Contact div {
+    flex-direction: column;
+    align-items: center;
+    /* Yazıları aşağıya ortala */
+    text-align: left;
+  }
+
+  #Contact iframe {
+    height: 300px;
+    /* Küçük ekranlarda harita yüksekliğini 300 piksele düşürdük */
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .col-33  { margin-top: 20%; }
+ }
+
+@media screen and (max-width: 1000px) {
+  /* navbar */
+  .TopNav .Menu a { display: none;  }
+  .TopNav .Menu { float: none;}
+  .TopNav a.icon { display: block; color: white;   }
+  .TopNav.responsive .icon { position: absolute; right: 0px; top: 8px;z-index: 999; }
+  .TopNav.responsive a { float: none;display: block; text-align: center; }
+  .TopNav.responsive .Logo { max-width: 250px; margin: auto;}
+  header {
+    padding-top: 300px; /* Yükseklik ayarı değiştirildi */
+    padding-right: 20px; /* Sağ kenar boşluğu ayarı değiştirildi */
+    font-size: 14px; /* Yazı boyutu azaltıldı */
+  }
+  .FirstTitle {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+ 
+}
+
+
+</style>
+
+
+
+
+<body>
+
+  <!-- nav -->
+
+  <nav class="TopNav" id="TopNavId">
+    <div class="container">
+      <div class="Logo">
+        <a href="/index.html">İkili Ambalaj</a>
+      </div>
+
+      <div class="Menu">
+        <a href="#Header">Anasayfa</a>
+        <a href="#About">Hakkımızda</a>
+        <a href="#Products">Ürünler</a>
+        <a href="#Contact">İletişim</a>
+        <a href="javascript:void(0)" class="icon" onclick="responsiveMenu()">&#9776;</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- header -->
+
+  <header id="Header">
+    <h2><span style="color: #8B93FF;">İkili Ambalaj'a</span> Hoş geldiniz! </h2>
+    <p>Ambalaj çözümlerindeki yeni standartları keşfetmek için doğru adrestesiniz</p>
+  </header>
+
+
+  <!-- Content -->
+
+  <main style="background-color: #FFF7F1;">
+
+    <!-- AboutUs -->
+
+    <section id="About">
+      <div class="row">
+        <div class="col-66">
+          <h1 class="FirstTitle">Hakkımızda</h1>
+          <p>
+            <span class="SecondTitle">İkili Ambalaj</span> Sektördeki tüm yenilikleri yakından takip ederek,
+            çözüm ortaklarımıza rekabetçi ve yenilikçi çözümler sunmakta, mevcut ve potansiyel müşteri
+            portföyüne doğru ürünü , yüksek kalite ve düşük maliyet ile doğru zamanda ulaştırılmayı
+            hedeflemektedir.
+          </p>
+        </div>
+        <div class="col-33">
+          <img src="/images/hakkimizda.jpg" alt="AboutUs">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="row">
+        <div class="col-33">
+          <img src="/images/hedeflerimiz.jpg" alt="AboutUs">
+        </div>
+        <div class="col-66">
+          <h1 class="FirstTitle">Hedeflerimiz</h1>
+          <p>
+            - Müşterilerimize katma değer sağlayacak çalışmalar yapmak <br>
+            - Ambalaj malzemelerinde tasarruf imkanı sunmak <br>
+            - Uzun soluklu çalışmayı benimseyerek çözüm ortaklığı sunmak <br>
+            - çevreye duyarlı geri dönüşümü ilke edinen firma olmak <br>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="Products" style="text-align: center;  border-bottom: 5px solid grey;" class="urunler-text">
+    <h1>Ürünlerimiz</h1>
+    <p style="font-size: large; text-align: center;">Size yardımcı olabileceğimiz bir şey var mı? Lütfen göz atın ve istediğiniz ürünü
+      seçin.</p>
+
+
+    <div class="card-container">
+
+      <!-- Card-1 -->
+
+      <div class="card">
+        <img src="/images/KoliBandiYeni.jpg" alt="Doğa Resmi">
+        <div class="card-content">
+          <h2>Koli Bandı </h2>
+          <p style="text-align: left;">
+            - Her türlü koli, paket ve ambalajda kullanılabilir <br>
+            - Hot Melt tutkal teknolojisi ile üretilir<br>
+            - Kuvvetli yapışma özelliğine sahiptir<br>
+            - 6 Renge kadar baskı imkanı<br>
+            - İstediğiniz ölçüde gerek manuel gerek makine bantı</p>
+        </div>
+      </div>
+
+      <!-- Card-2 -->
+
+      <div class="card">
+        <img src="/images/BalonNaylonYeni.jpg" alt="Doğa Resmi">
+        <div class="card-content">
+          <h2>Balonlu Naylon</h2>
+          <p style="text-align: left;">
+            - İki adet polietilen veya polipropilen film tabakasını arasına balonlu bir ara kat oluşturarak lamine
+            edilen bir ambalaj malzemesidir. <br>
+            - Böylelikle sarıldığı ürünlerin etrafında hava yastığı vazifesi görerek ürünlerinizin her türlü hava
+            şartlarından ve darbelerden korunmasını sağlar.<br>
+            - İstediğiniz ölçü ve gramajda alım yapabilirsiniz.<br>
+            - Torba ve tabaka gibi konfeksiyon işlemlerimiz mevcuttur.</p>
+        </div>
+      </div>
+
+      <!-- Card-3 -->
+
+      <div class="card">
+        <img src="/images/PoşetTorbaYeni.jpg" alt="Doğa Resmi">
+        <div class="card-content">
+          <h2>Poşet Torba</h2>
+          <p style="text-align: left;">
+            A.Y.P.E- YYPE (Hışır) torbalar ihtiyacınız olan ölçü ve kalınlıklarda yapılır.Aynı zamanda geri dönüştürmeye
+            de uygun olan bu yenilikçi ürünlerin doğada bozulma süresi ortam şartlarına bağlı olarak 12-24 ay
+            arasındadır. Doğada gün ışığı, sıcaklık, nem ve bakterilerin etkisiyle biyolojik olarak çözünür. Siz de
+            “Biyoçözünebilir (Biodegradable)” ürünleri tercih ederek, dünyamızın geleceğine katkıda bulunabilirsiniz.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card-4 -->
+
+      <div class="card">
+        <img src="/images/StrecYeni.jpg" alt="Doğa Resmi">
+        <div class="card-content">
+          <h2>Streç</h2>
+          <p style="text-align: left;">
+            - Streç filmlerimiz, ürünlerinizi nakliye sırasında veya depolama aşamasında güvenli bir şekilde bir
+            arada tutar. <br>
+            - Kir,toz,yağmur gibi dış etkenlerden korur.<br>
+            - İhtiyacanıza göre farklı ölçü ve kalınlıkta ürünlerimiz mevcuttur.<br>
+            - Streçlerimiz ürünlerin stoklanması ve nakliyesi sırasında oluşabilecek hasarlardan korur.<br>
+            - Uzama katsayısı ve direnç özelliğiyle ürünlerinizi sağlam bir şekilde sararken, hafif olması sebebiyle
+            maliyeti azaltır.<br>
+            - Ürünlerimizin hepsi %100 geri dönüşümlüdür.<br>
+            - Manuel ve Makine kullanımınıza uygun<br>
+            - Delinme ve Yırtılmaya karşı dirençli<br>
+            - Şeffaf ve Parlaktır.</p>
+        </div>
+      </div>
+
+      <!-- Card-5 -->
+
+      <div class="card">
+        <img src="/images/PresStrecYeni.jpg" alt="Doğa Resmi">
+        <div class="card-content">
+          <h2>Pres Streç</h2>
+          <p style="text-align: left;">
+            - Öngerdirilmiş Pres Streç ile daha az streç kullanımı <br>
+            - İçi daha yapışkan ve bu sayede ürünlerinizi daha fazla kavrama imkanı<br>
+            - Dışı daha kaygan ve sevkiyat halinde devrilmenin önüne geçer<br>
+            - Kenarları lifli ve streç düşse bile kopma yaşamazsınız<br>
+            - Normal strece göre 1 palette daha az gramaj harcarsınız<br>
+            - Streç tüketiminizde tasarruf sağlar<br>
+            - Ön gerdirilmiş pres streçin kopma mukavemeti cast streçe göre daha yüksektir</p>
+        </div>
+      </div>
+
+      <!-- Card-6 -->
+
+      <div class="card">
+        <img src="/images/PoliofinShrinkYeni.jpg" alt="Doğa Resmi">
+        <div class="card-content">
+          <h2>Poliolefin Shrink</h2>
+          <p style="text-align: left;">
+            - Polietilen bazlı çok katmanlı yapısıyla düşük yoğunluklu bir shrink filmdir. <br>
+            - Parlaktır, şıktır, albeni sağlar.<br>
+            - Gıda ile temasa uygundur.<br>
+            - Güçlü yüzey, kaynak ve çekme özelliğine sahiptir.<br>
+            - Düşük yoğunluğu sayesinde birim maliyeti düşüktür.<br>
+            - Dondurulmuş ürünlerde yüksek performans gösterir.<br>
+            - Farklı coğrafi ve iklim şartlarında stoklamaya uygundur.<br>
+            - Otomatik makinelere uyumu kolaydır, ısı ve yüksek hızlara uyum sağlar.<br>
+            - Film kalınlıkları 12-15-17-19-25 micron arasındadır.</p>
+        </div>
+      </div>
+
+      <!-- Card-7 -->
+
+      <div class="card">
+        <img src="/images/PolietilenShrinkYeni.jpg" alt="Doğa Resmi">
+        <div class="card-content">
+          <h2>Polietilen (PE) Shrink</h2>
+          <p style="text-align: left;">
+            - Polietilen (PE) Shrink Film, ambalaj yapılması gereken tüm ürünlerde ısıl işlemle büzülerek ürünü sarması
+            ile yapılan bir paketleme, ambalajlama şeklidir. <br>
+            - Ambalajlanacak ürüne geçirilir daha sonra beraberinde ısıl işleme girerler böyle verilen ısı sayesinde
+            naylon olduğu ürünün şeklini alır ve ürünü sarar.<br>
+            - Shrinkleme işlemi Shrink hatları ve fırınları kullanılarak yapılır.<br>
+            - Özellikleri, kullanım kolaylığı ve kullanım alanları oldukça fazla ve geniş olduğundan dolayı çok tercih
+            edilen ürün koruma ambalajıdır.</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="Contact">
+      <h1 style="text-align: center; font-size: 3rem;">İletişim</h1>
+      <div style="display: flex; justify-content: space-between;">
+          <div style="flex: 1; margin-top: 200px; line-height: 2rem;">
+              <h2>İletişim Bilgileri 1</h2> <br>
+              <h3>Emre ABDİ</h3>
+              <p>Telefon : 0 537 872 78 44 </p>
+              <p>E-mail :<a href="mailto:emre@ikiliambalaj.com">emre@ikiliambalaj.com</a></p>
+          </div>
+          
+          <div style="flex: 1; margin-top: 200px; line-height: 2rem;">
+              <h2>İletişim Bilgileri 2</h2> <br>
+              <h3>Ferdi AYHAN</h3>
+              <p>Telefon : 0 543 521 56 43 </p>
+              <p>  E-mail :<a href="mailto:ferdi@ikiliambalaj.com">ferdi@ikiliambalaj.com</a></p>
+          </div>
+          
+          <div style="flex: 1;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1505.5118418657642!2d28.675238097047785!3d41.00285481688769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa0805107fa67%3A0xfe3a5fb120d5ed9a!2s3.MATBAACILAR%20S%C4%B0TES%C4%B0!5e0!3m2!1str!2str!4v1713656520269!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <Footer style="margin-top: 50px;">
+      <p>&copy; Copright 2024 Powered by <a href="https://www.instagram.com/ozceliktaha/" target="_blank" style="color: #fff; text-decoration: none;">www.ozceliktaha.com</a></p>
+
+
+
+
+    </Footer>
+
+
+<script type="text/javascript">
+    function responsiveMenu() {
+        var x = document.getElementById("TopNavId");
+        if (x.className === "TopNav") {
+            x.className += " responsive";
+        } else {
+            x.className = "TopNav";
+        }
+    }
+</script>
+
+
+
+</body>
+
+</html>
